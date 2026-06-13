@@ -1,0 +1,254 @@
+.desktopShell {
+  min-height: 100vh;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* ── Top navigation — dark pro ── */
+.topNavigation {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 28px;
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ── Brand ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.brandIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 15px;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.25);
+}
+
+.brandText {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  color: #ffffff;
+}
+
+/* ── Nav items ── */
+.navScroll {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.navScroll::-webkit-scrollbar { display: none; }
+
+.topNavItem {
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 13px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.topNavItem:hover {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.topNavItem.active {
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+/* ── Right side ── */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.userMenuWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.userButton {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1.5px solid #334155;
+  background: #1e293b;
+  color: #e2e8f0;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.userButton:hover {
+  border-color: #2563eb;
+  background: #1e3a5f;
+  color: #fff;
+}
+
+/* ── User dropdown ── */
+.userDropdown {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 220px;
+  padding: 8px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.18);
+  z-index: 999;
+}
+
+.userDropdownHeader {
+  padding: 8px 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 6px;
+}
+
+.userDropdownName {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.userDropdownRole {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.logoutButton {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.logoutButton:hover { background: #fef2f2; }
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid #334155;
+  border-radius: 8px;
+  background: #1e293b;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  transition: all 0.15s;
+}
+
+.hamburger:hover { border-color: #475569; color: #e2e8f0; }
+
+/* ── Mobile nav ── */
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  padding: 10px 16px;
+  gap: 2px;
+}
+
+.mobileNavItem {
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.15s;
+}
+
+.mobileNavItem:hover,
+.mobileNavItem.active {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.mobileLogout {
+  margin-top: 6px;
+  border: 0;
+  background: transparent;
+  color: #f87171;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.mobileLogout:hover { background: rgba(239,68,68,0.1); }
+
+/* ── Content area ── */
+.contentScroll {
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.contentInner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 28px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .navScroll  { display: none; }
+  .hamburger  { display: flex; }
+  .mobileNav  { display: flex; }
+
+  .contentScroll { height: auto; min-height: calc(100vh - 60px); }
+  .contentInner  { padding: 16px; }
+}

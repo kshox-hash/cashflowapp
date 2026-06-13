@@ -1,0 +1,210 @@
+.dashboardPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboardHero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.riskBanner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 12px;
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.dashMetric {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.dashMetricIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dashMetricIcon.blue   { background: #eff6ff; color: #2563eb; }
+.dashMetricIcon.green  { background: #ecfdf5; color: #059669; }
+.dashMetricIcon.red    { background: #fef2f2; color: #dc2626; }
+.dashMetricIcon.amber  { background: #fffbeb; color: #d97706; }
+
+.dashMetricLabel {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dashMetricValue {
+  margin: 6px 0 0;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.4px;
+  color: #101828;
+}
+
+.dashMetricValue.green { color: #059669; }
+.dashMetricValue.red   { color: #dc2626; }
+.dashMetricValue.amber { color: #d97706; }
+
+.dashMetricSub {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.dashGrid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.chartHeaderFull {
+  padding: 18px 20px 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.chartHeaderFull h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #101828;
+}
+
+.chartHeaderFull p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.dashChart {
+  height: 220px;
+  padding: 16px 16px 8px;
+}
+
+.dashTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.dashTable th {
+  padding: 10px 16px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748b;
+  background: #f8fafc;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dashTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f8fafc;
+  color: #374151;
+  font-weight: 600;
+}
+
+.dashTable tr:last-child td {
+  border-bottom: none;
+}
+
+.dashGrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.dashCardTitle {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #101828;
+}
+
+.dashStatList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dashStat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.dashStat span {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.dashStat strong {
+  font-weight: 800;
+  color: #101828;
+}
+
+.dashStat strong.green  { color: #059669; }
+.dashStat strong.red    { color: #dc2626; }
+.dashStat strong.amber  { color: #d97706; }
+
+.positive { color: #059669; }
+.negative { color: #dc2626; }
+
+.errorBox {
+  padding: 16px;
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.emptyBox {
+  padding: 24px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashGrid2,
+  .dashGrid3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+}

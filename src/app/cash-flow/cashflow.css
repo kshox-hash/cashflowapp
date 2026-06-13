@@ -1,0 +1,501 @@
+.cashflowPage {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cashflowHero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.heroRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rangeCard {
+  min-width: 260px;
+  padding: 12px 16px;
+  border: 1px solid #dbe3ef;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow:
+    0 10px 26px rgba(16, 24, 40, 0.04),
+    0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.rangeCard span {
+  display: block;
+  color: #667085;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.rangeCard strong {
+  display: block;
+  margin-top: 5px;
+  color: #101828;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.cashflowToolbar {
+  height: 54px;
+  padding: 7px;
+  background: #ffffff;
+  border: 1px solid #dbe3ef;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 26px rgba(16, 24, 40, 0.04),
+    0 1px 2px rgba(16, 24, 40, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainTabs {
+  height: 40px;
+  padding: 3px;
+  background: #eef2f7;
+  border-radius: 12px;
+  display: flex;
+  gap: 4px;
+}
+
+.mainTabs button {
+  height: 34px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #667085;
+  font-size: 13px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.mainTabs button:hover {
+  color: #101828;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.mainTabs button.active {
+  background: #ffffff;
+  color: #2563eb;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.13);
+}
+
+.periodControls {
+  height: 40px;
+  padding: 3px;
+  background: #f6f8fb;
+  border: 1px solid #e7ecf3;
+  border-radius: 12px;
+  display: flex;
+  gap: 4px;
+}
+
+.periodControls button {
+  height: 32px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #475467;
+  font-size: 13px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.periodControls button:hover {
+  background: #ffffff;
+  color: #2563eb;
+  box-shadow: 0 4px 10px rgba(16, 24, 40, 0.06);
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.chartHeaderFull {
+  min-height: 72px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e7ecf3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chartTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chartTitleGroup h3 {
+  margin: 0;
+  color: #101828;
+  font-size: 17px;
+  font-weight: 950;
+  letter-spacing: -0.2px;
+}
+
+.chartTitleGroup p {
+  margin: 3px 0 0;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.safeDot,
+.riskDot {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.safeDot {
+  background: #eafbf3;
+}
+
+.safeDot::after {
+  content: "↗";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #12b76a;
+  font-weight: 950;
+}
+
+.riskDot {
+  background: #ffeef3;
+}
+
+.riskDot::after {
+  content: "!";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #e11d48;
+  font-weight: 950;
+}
+
+.chartLegend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.legendLine {
+  width: 28px;
+  height: 3px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.blueLine {
+  background: #2563eb;
+}
+
+.redLine {
+  background: #e11d48;
+}
+
+.dashed {
+  background: repeating-linear-gradient(
+    to right,
+    #e11d48 0,
+    #e11d48 5px,
+    transparent 5px,
+    transparent 9px
+  );
+}
+
+.chartContainer {
+  width: 100%;
+  height: 430px;
+  padding: 24px 28px 18px 12px;
+}
+
+.tableHeader,
+.movementsHeader {
+  min-height: 58px;
+  padding: 0 20px;
+  border-bottom: 1px solid #e7ecf3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tableHeader h3,
+.movementsHeader h3 {
+  margin: 0;
+  color: #101828;
+  font-size: 16px;
+  font-weight: 950;
+}
+
+.movementsHeader span {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.movementsHeader select {
+  width: 230px;
+  height: 42px;
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+  padding: 0 12px;
+  background: #ffffff;
+  color: #101828;
+  font-size: 13px;
+  font-weight: 750;
+  outline: none;
+}
+
+.cashflowTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cashflowTable th {
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
+  color: #667085;
+  font-size: 12px;
+  font-weight: 950;
+  text-align: left;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e7ecf3;
+}
+
+.cashflowTable td {
+  border-bottom: 1px solid #edf1f6;
+  color: #101828;
+  font-size: 13px;
+  font-weight: 750;
+  padding: 17px 18px;
+}
+
+.cashflowTable tbody tr:hover {
+  background: #f8fafc;
+}
+
+.riskRow {
+  background: #fff6f8;
+}
+
+.positive {
+  color: #12b76a !important;
+}
+
+.negative {
+  color: #e11d48 !important;
+}
+
+.quickFilters {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e7ecf3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quickFilters span {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.filterDivider {
+  margin-left: 16px;
+}
+
+.quickChip {
+  height: 30px;
+  padding: 0 13px;
+  border-radius: 9px;
+  border: 1px solid #dbe3ef;
+  background: #ffffff;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.quickChip:hover {
+  color: #2563eb;
+  border-color: #b9c9ee;
+}
+
+.quickChip.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.18);
+}
+
+.emptyBox,
+.loadingBox,
+.errorBox {
+  height: 220px;
+  display: grid;
+  place-items: center;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.errorBox {
+  color: #e11d48;
+}
+
+.deleteButton {
+  height: 30px;
+  padding: 0 12px;
+  border: 1px solid #ffd3dc;
+  border-radius: 8px;
+  background: #fff6f8;
+  color: #e11d48;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background: #ffeef3;
+}
+
+.totalsBar {
+  border-top: 1px solid #dbe3ef;
+  background: #f8fbff;
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1.3fr 1.3fr;
+  align-items: center;
+  gap: 18px;
+}
+
+.totalsBar span {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.totalsBar b {
+  padding-left: 18px;
+  border-left: 1px solid #dbe3ef;
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.addMovementCard {
+  width: 100%;
+}
+
+.addMovementCard h2 {
+  margin: 0;
+  color: #101828;
+  font-size: 20px;
+  font-weight: 950;
+}
+
+.addMovementCard p {
+  margin: 6px 0 24px;
+  color: #667085;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.addMovementCard label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.addMovementCard input,
+.addMovementCard select {
+  height: 46px;
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+  padding: 0 14px;
+  background: #ffffff;
+  color: #101828;
+  font-size: 14px;
+  font-weight: 650;
+  outline: none;
+}
+
+.addMovementCard input:focus,
+.addMovementCard select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.fullField {
+  margin-top: 16px;
+}
+
+.formActions {
+  margin-top: 26px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteBanner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.deleteBannerText {
+  flex: 1;
+  color: #101828;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.deleteBannerActions {
+  display: flex;
+  gap: 8px;
+}
+
+.dangerButton {
+  height: 38px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 9px;
+  background: #e11d48;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}

@@ -1,0 +1,182 @@
+.peopleCostsPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.peopleCostsHeader {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.peopleCostsHeader .pageTitle {
+  flex: 1;
+}
+
+.tabs {
+  height: 38px;
+  padding: 3px;
+  background: #e9edf3;
+  border-radius: 9px;
+  display: flex;
+}
+
+.tabs button {
+  height: 32px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #667085;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #ffffff;
+  color: #101828;
+  font-weight: 900;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.spacing {
+  height: 18px;
+}
+
+.tableHeader {
+  height: 52px;
+  padding: 0 18px;
+  border-bottom: 1px solid #dde3ec;
+  display: flex;
+  align-items: center;
+}
+
+.tableHeader h3 {
+  margin: 0;
+  color: #101828;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataTable th {
+  background: #f1f4f8;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 900;
+  text-align: left;
+  padding: 15px 16px;
+}
+
+.dataTable td {
+  border-top: 1px solid #e7ecf3;
+  color: #101828;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 15px 16px;
+}
+
+.negative {
+  color: #e11d48 !important;
+}
+
+.deleteButton {
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid #ffd3dc;
+  border-radius: 7px;
+  background: #fff6f8;
+  color: #e11d48;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background: #ffeef3;
+}
+
+.emptyBox,
+.loadingBox,
+.errorBox {
+  height: 220px;
+  display: grid;
+  place-items: center;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.errorBox {
+  color: #e11d48;
+}
+
+.formCard {
+  width: 760px;
+}
+
+.formCard h2 {
+  margin: 0;
+  color: #101828;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.formCard p {
+  margin: 6px 0 24px;
+  color: #667085;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 14px;
+}
+
+.formCard label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.formCard input,
+.formCard select {
+  height: 46px;
+  border: 1px solid #dde3ec;
+  border-radius: 9px;
+  padding: 0 14px;
+  background: #ffffff;
+  color: #101828;
+  font-size: 14px;
+}
+
+.formCard input[readonly] {
+  background: #f3f5f8;
+}
+
+.full {
+  margin-top: 16px;
+}
+
+.formActions {
+  margin-top: 26px;
+  display: flex;
+  justify-content: flex-end;
+}
